@@ -4,7 +4,7 @@ Site : https://neosegard.github.io/
 
 Portfolio statique (HTML, CSS, Bootstrap, JavaScript) hébergé sur GitHub Pages.
 
-## Veille technologique automatique
+"""## Veille technologique automatique
 
 Chaque jour, un scénario Make :
 
@@ -31,3 +31,4 @@ La page d'accueil lit `veille.json` et affiche la veille du jour, son résumé c
   "resume_complet": "Résumé reformulé, paragraphes séparés par une ligne vide"
 }
 ```
+"""
