@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2025-12-12",
+    "titre": "Faille critique de Notepad++ 8.8.9",
+    "source": "IT-Connect",
+    "lien": "https://www.it-connect.fr/notepad-8-8-9-corrige-une-faille-importante-permettant-dinjecter-une-mise-a-jour-malveillante/",
+    "domaine": "Cybersécurité",
+    "mots_cles": ["Notepad++", "Man-in-the-Middle", "Mise à jour"],
+    "note": null,
+    "justification": "",
+    "resume": "Notepad++ 8.8.9 corrige une faille de son outil de mise à jour WinGUp, exploitée pour remplacer les mises à jour par des logiciels malveillants. La nouvelle version vérifie désormais la signature numérique des installateurs.",
+    "resume_complet": "Notepad++ a publié la version 8.8.9 pour corriger une vulnérabilité majeure dans son outil de mise à jour WinGUp. Des pirates ont exploité cette faille pour détourner le processus de mise à jour via des attaques Man-in-the-Middle, permettant l'injection de logiciels malveillants à la place des mises à jour légitimes.\n\nTrois organisations auraient été compromises, avec collecte d'informations système (netstat, systeminfo, tasklist) exfiltrées vers des serveurs externes.\n\nLa version 8.8.9 intègre désormais une vérification de signature numérique des installateurs. Mise à jour fortement recommandée."
+  }
+]
