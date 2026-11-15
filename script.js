@@ -144,13 +144,16 @@ function ouvrirVeille(article) {
     const corps = document.getElementById('veille-modal-corps');
     corps.textContent = '';
     String(article.resume_complet || article.resume || '')
-        .split(/\n\s*\n/)
+        .split(/\s*\[\[P\]\]\s*|\n\s*\n/)
         .filter(p => p.trim())
         .forEach(p => corps.append(creer('p', null, p.trim())));
 
     const mots = document.getElementById('veille-modal-mots');
     mots.textContent = '';
-    (article.mots_cles || []).forEach(m => mots.append(creer('span', 'veille-mot', m)));
+    const motsCles = Array.isArray(article.mots_cles)
+        ? article.mots_cles
+        : String(article.mots_cles || '').split(/\s*[,;|]\s*/);
+    motsCles.filter(Boolean).forEach(m => mots.append(creer('span', 'veille-mot', m)));
 
     const noteBloc = document.getElementById('veille-modal-note');
     noteBloc.textContent = '';
