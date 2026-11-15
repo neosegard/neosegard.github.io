@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-11-15",
+    "titre": "Compromission des passerelles Check Point via PHP2Shell et attaque de serveurs VMware ESXi",
+    "source": "IT-Connect",
+    "lien": "https://www.it-connect.fr/check-point-php2shell-wiper-esxi-tsga/",
+    "domaine": "Sécurité des systèmes et réseaux",
+    "mots_cles": "PHP2Shell, VMware ESXi, vulnérabilité zero‑day",
+    "note": "8",
+    "justification": "Très pertinent pour le BTS SIO option SISR car il aborde la sécurisation des infrastructures réseau et virtualisées, compétences essentielles en administration et en gestion des incidents de sécurité.",
+    "resume": "Cet article décrit comment une faille zero‑day de Gaia OS combinée à l’outil PHP2Shell a permis de compromettre des passerelles Check Point et d’installer un wiper sur un serveur VMware ESXi. Il met en avant les risques liés aux vulnérabilités de sécurité sur les équipements réseau et les hyperviseurs.",
+    "resume_complet": "Une semaine seulement après la publication du correctif d’urgence PHP2Shell (CVE‑2026‑109618/109619), des attaquants ont exploité la faille sur le portail Mobile Access (VPN SSL) des passerelles Check Point. Entre le 30 octobre et le 4 novembre, une vingtaine de systèmes non patchés, principalement en Israël, ont été infiltrés, obtenant un accès root grâce à une zero‑day du système Gaia OS (CVE‑2026‑123039, CVSS 7.8). [[P]] Les hackers ont installé des webshells PHP puis une porte dérobée nommée TSGA, déguisée en processus CPconfigdaemon, et ont utilisé le scanner open‑source gogo pour explorer le réseau interne. Ils ont ensuite accédé en SSH à des hôtes VMware ESXi via le compte vpxuser, puis ont lancé le wiper destroy_v6, qui écrase et supprime récursivement les fichiers, accompagné d’une note en hébreu indiquant la volonté de destruction. [[P]] L’enquête de Check Point Research pointe vers des variantes de PhiliKit, associées au groupe chinois UNC5221, mais les indices (cible israélienne, note en hébreu, implication de Dream Security) rendent l’attribution incertaine, laissant envisager des représailles ou une opération sous faux drapeau. [[P]] Check Point recommande d’appliquer immédiatement le Jumbo Hotfix de novembre sur tous les serveurs de management et les Security Gateways, en priorisant les portails Mobile Access exposés, afin de corriger PHP2Shell et les vulnérabilités connexes."
+  },
+{
     "date": "2025-12-12",
     "titre": "Faille critique de Notepad++ 8.8.9",
     "source": "IT-Connect",
