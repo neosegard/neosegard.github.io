@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-11-17",
+    "titre": "Remote Lock : verrouillage à distance d’un PC Windows avec Intune",
+    "source": "IT-Connect",
+    "lien": "https://www.it-connect.fr/intune-remote-lock-verrouiller-pc-windows-distance/",
+    "domaine": "Gestion des postes de travail",
+    "mots_cles": "Intune, verrouillage à distance, sécurité des endpoints",
+    "note": "9",
+    "justification": "Très pertinent pour le BTS SIO option SISR : il traite de la gestion centralisée des postes, de la sécurisation des terminaux et de l’utilisation d’outils de mobilité d’entreprise, compétences essentielles du référentiel.",
+    "resume": "Microsoft a introduit la fonction Remote Lock dans Intune, permettant de bloquer à distance un PC Windows perdu ou volé sans effacer les données. L’article détaille le fonctionnement, la configuration et les limites de cette nouvelle fonctionnalité.",
+    "resume_complet": "Microsoft a introduit en pré‑version la fonction Remote Lock dans Intune, permettant de verrouiller à distance un appareil Windows perdu ou volé sans effacer les données. Le verrouillage ferme les sessions actives, masque les options de connexion et affiche un écran indiquant que l’appareil est bloqué, tout en conservant le chiffrement BitLocker et l’inscription du PC à Intune. Cette fonctionnalité cible Windows 10/11 Pro, Enterprise et Education, et nécessite que le dispositif soit joint à Entra ID (ou hybride) ou inscrit uniquement au MDM. [[P]] Le verrouillage s’active via un profil personnalisé OMA‑URI dans la console Intune : le paramètre ./Device/Vendor/MSFT/RemoteDeviceLock/LockState passe à 1 pour verrouiller et à 0 pour déverrouiller, avec des options facultatives comme LockReason et RecoveryHint. Le PC reçoit l’ordre lors de sa prochaine synchronisation avec Intune, ce qui implique qu’un appareil hors ligne ne sera pas verrouillé tant qu’il ne se reconnecte pas. Le déverrouillage ne peut être effectué que par Intune, aucun code PIN ou mot de passe local n’est accepté. [[P]] Remote Lock ne désactive pas le compte utilisateur, n’isole pas l’appareil du réseau et ne bloque pas les modes de démarrage comme WinRE, le mode sans‑échec ou le boot sur clé USB. Ainsi, si le disque n’est pas chiffré, les données restent accessibles via un support externe. La fonction complète le processus d’effacement à distance déjà existant, offrant une option supplémentaire de protection pour les postes Windows gérés."
+  },
+{
     "date": "2026-11-15",
     "titre": "Compromission des passerelles Check Point via PHP2Shell et attaque de serveurs VMware ESXi",
     "source": "IT-Connect",
