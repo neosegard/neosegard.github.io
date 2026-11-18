@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-11-18",
+    "titre": "Windows Server 2028 : aperçu des nouveautés en préversion",
+    "source": "IT-Connect",
+    "lien": "https://www.it-connect.fr/windows-server-2028-preversion-publique-nouveautes/",
+    "domaine": "Administration serveur",
+    "mots_cles": "Server Core, NVMe, Intune",
+    "note": "8",
+    "justification": "Très pertinent pour le BTS SIO option SISR car il traite de nouvelles fonctionnalités de Windows Server, essentielles pour la gestion, la sécurisation et l’automatisation des infrastructures serveur étudiées dans le cursus.",
+    "resume": "Windows Server 2028 en préversion publique introduit un Server Core durci, le support natif NVMe, l’intégration d’Intune et de l’IA locale. Ces nouveautés visent à renforcer la sécurité et à automatiser la gestion des serveurs.",
+    "resume_complet": "Microsoft a lancé la préversion publique de Windows Server 2028 le 17 novembre 2026, successeur de Windows Server 2025. La nouvelle version mise sur la sécurité renforcée et l’intégration d’IA, avec plusieurs fonctions destinées aux administrateurs : Server Core est désormais durci par défaut avec une security baseline, le Trusted Launch protège le démarrage des VM Hyper‑V grâce à Secure Boot et vTPM, et les Confidential VM chiffrent la mémoire pour empêcher l’accès de l’hôte. Le système gère automatiquement les certificats et introduit la cryptographie post‑quantique."
+  },
+{
     "date": "2026-11-17",
     "titre": "Remote Lock : verrouillage à distance d’un PC Windows avec Intune",
     "source": "IT-Connect",
