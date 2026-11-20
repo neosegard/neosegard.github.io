@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-11-20",
+    "titre": "Vulnérabilité critique de VMware vCenter (CVE‑2026‑123890) exploitée depuis septembre 2026",
+    "source": "IT-Connect",
+    "lien": "https://www.it-connect.fr/vmware-vcenter-cve-2026-123890-zero-day/",
+    "domaine": "Sécurité des environnements virtualisés",
+    "mots_cles": "VMware vCenter, CVE‑2026‑123890, zero‑day",
+    "note": "9",
+    "justification": "Les étudiants SISR sont amenés à gérer des plateformes de virtualisation ; connaître les failles et les correctifs de vCenter est essentiel pour garantir la continuité de service. L’article offre un cas concret de gestion de vulnérabilité, très pertinent pour les compétences d’administration et de sécurisation des infrastructures virtualisées.",
+    "resume": "Broadcom a publié un correctif pour la CVE‑2026‑123890, une vulnérabilité critique de VMware vCenter exploitée en zero‑day depuis septembre 2026. Le texte explique le fonctionnement de la faille, son impact sur les environnements virtualisés et les actions de mise à jour à entreprendre.",
+    "resume_complet": "Broadcom a publié le 19 novembre 2026 un correctif pour cinq failles dans VMware vCenter, SDDC Manager et les VMware Tools. La plus grave, la CVE‑2026‑123890, affecte le service d’annuaire (VMware Directory Service) via l’interface RPC sur le port TCP 2012 et obtient un score CVSS de 9,8. Elle permet à un attaquant disposant d’un simple accès réseau de récupérer une clé de session grâce à des UUID prévisibles, puis d’ouvrir une session administrateur SSO sans aucun mot de passe, accédant ainsi aux bases d’annuaire et aux fichiers sensibles. [[P]] Mandiant et le Google Threat Intelligence Group ont attribué l’exploitation de cette zero‑day à un groupe d’espionnage chinois, ARMORY CASTLE (anciennement UNC5221). L’attaque a d’abord compromis une appliance BeyondTrust via une autre zero‑day (CVE‑2026‑102764), puis a scanné les ports VMware, utilisé un outil maison (BONESAW) pour créer un compte admin SSO et voler la clé SAML, avant de déployer des webshells, activer SSH et extraire des données d’Active Directory et de PostgreSQL. Cette chaîne d’attaque montre une connaissance approfondie des plateformes VMware. [[P]] Pour se protéger, le seul remède efficace est d’appliquer les correctifs : vCenter 9.1 → 9.1.1.0200, vCenter 9.0 → 9.0.2.0200, vCenter 8.0 → 8.0 Update 3m, VMware Cloud Foundation 5.x → vCenter 8.0 Update 3m, et un correctif sur demande pour vCenter 7.0. Les versions 6.5 et 6.7 ne sont plus supportées et restent vulnérables. Un durcissement supplémentaire peut être réalisé avec l’outil VCSA Hardening & Logging de Mandiant."
+  },
+{
     "date": "2026-11-19",
     "titre": "Failles critiques HTTP/2 dans NGINX (NGINX2Root)",
     "source": "IT-Connect",
