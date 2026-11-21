@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-11-21",
+    "titre": "Intune introduit les fenêtres de maintenance pour Windows Update",
+    "source": "IT-Connect",
+    "lien": "https://www.it-connect.fr/intune-fenetres-de-maintenance-windows-update/",
+    "domaine": "Gestion de parc informatique / Cloud",
+    "mots_cles": "Intune, Fenêtres de maintenance, Windows Update",
+    "note": "8",
+    "justification": "La gestion centralisée des mises à jour via Intune est directement liée aux missions du technicien SISR (déploiement, suivi et sécurisation des postes), ce qui en fait une ressource très utile pour le cursus.",
+    "resume": "Intune intègre désormais la gestion des fenêtres de maintenance pour Windows Update, permettant de planifier les installations de correctifs sur les appareils gérés. Cette fonctionnalité, annoncée à Ignite 2025, simplifie la conformité et la disponibilité des systèmes en entreprise.",
+    "resume_complet": "Microsoft a enfin déployé dans Intune la fonctionnalité des fenêtres de maintenance, annoncée lors d’Ignite 2025 et attendue depuis un an. Elle permet de définir quand Windows Update peut télécharger, installer et redémarrer les postes, en s’appuyant sur de nouveaux paramètres CSP (MaintenanceWindowEnabled, MaintenanceWindowUpdateActions, etc.). La fonction est disponible dès le 16 novembre 2026 pour les appareils sous Windows 11 24H2 (build 26100.7840) ou plus, et s’applique aux éditions Pro, Enterprise, Education et IoT Enterprise. [[P]] Dans la console Intune, on crée une fenêtre via Appareils > Gestion des appareils > Fenêtres de maintenance. On choisit le niveau de restriction (redémarrage seul, installer‑et‑redémarrer, ou télécharger‑installer‑redémarrer), la récurrence (unique, quotidienne, hebdomadaire ou mensuelle) et la durée (2 à 24 heures), le tout en heure locale du poste. La fenêtre s’étend aux mises à jour de fonctionnalités, .NET, pilotes et firmwares, mais ne remplace pas les anneaux de mise à jour existants."
+  },
+{
     "date": "2026-11-20",
     "titre": "Vulnérabilité critique de VMware vCenter (CVE‑2026‑123890) exploitée depuis septembre 2026",
     "source": "IT-Connect",
