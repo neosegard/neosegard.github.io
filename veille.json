@@ -1,14 +1,1 @@
-[
-  {
-    "date": "2026-11-25",
-    "date_publication": "2026-11-24",
-    "titre": "Exemple",
-    "source": "CNIL",
-    "lien": "https://www.cnil.fr/",
-    "domaine": "RGPD",
-    "mots_cles": "a, b, c",
-    "note": "5",
-    "justification": "Exemple",
-    "resume": "Exemple",
-    "resume_complet": "Exemple"
-  }]
+[]
