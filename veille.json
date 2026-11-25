@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "date": "2026-11-25",
+    "date_publication": "2026-11-17",
+    "titre": "Multiples vulnérabilités découvertes dans Mitel MiCollab",
+    "source": "CERT-FR",
+    "lien": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1547/",
+    "domaine": "Vulnérabilités logicielles et correctifs",
+    "mots_cles": "Mitel MiCollab, exécution de code, déni de service",
+    "note": "7",
+    "justification": "Analyse de vulnérabilités et mise à jour de services critiques, compétences essentielles pour les techniciens SISR.",
+    "resume": "Le CERT‑FR signale plusieurs failles dans Mitel MiCollab, dont certaines permettent l’exécution de code à distance, un déni de service et la compromission de données. Les bulletins détaillent les vecteurs d’attaque et les correctifs recommandés.",
+    "resume_complet": "Le CERT‑FR a publié un avis (CERTFR‑2026‑AVI‑1547) le 17 novembre 2026 concernant plusieurs failles présentes dans les versions de MiCollab antérieures à 10.3.0.18. Ces vulnérabilités exposent le système à des risques d’intégrité et de confidentialité des données, de contournement de la politique de sécurité, de déni de service à distance et d’exécution de code arbitraire à distance. [[P]] Les principales failles, dont la CVE‑2026‑133323, permettent à un attaquant d’exécuter du code sur le serveur, de provoquer un arrêt du service ou d’accéder à des informations sensibles. Le bulletin de sécurité Mitel 2026‑0012 du 16 novembre 2026 détaille les correctifs à appliquer. [[P]] Pour se protéger, il est recommandé de consulter le bulletin de sécurité de Mitel et d’appliquer immédiatement les correctifs fournis. Les liens officiels vers le bulletin et la fiche CVE sont disponibles sur le site de Mitel et sur le CVE database."
+  }]
