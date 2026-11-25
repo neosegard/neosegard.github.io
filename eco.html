@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éco-conception - Portfolio BTS SIO</title>
+    <meta name="description" content="Démarche d'éco-conception du portfolio de Neo SEGARD : optimisations, performances et empreinte carbone.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="96f12829-2395-42b5-89d1-8f8da651ebcd" data-blockingmode="auto" type="text/javascript"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXBGD1GCQZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXBGD1GCQZ');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfolio BTS SIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#presentation">Présentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#projets">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#veille">Veille Technologique</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eco.html">Éco-conception</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" onclick="toggleTheme()">🌓 Thème</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Démarche Éco-responsable</h1>
+            <p>Comment ce site a été pensé pour consommer le moins possible</p>
+        </div>
+    </section>
+
+    <!-- Optimisations -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Optimisations mises en place</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h3>Aucune image</h3>
+                        <p>Le site n'utilise aucune image : tous les effets visuels (couleurs, ombres, animations) sont faits en CSS. Les images sont souvent la ressource la plus lourde d'une page web.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h3>Mise en cache</h3>
+                        <p>Bootstrap et les polices sont chargés depuis des CDN : s'ils sont déjà en cache dans le navigateur du visiteur, ils ne sont pas retéléchargés. Les fichiers CSS et JS du site sont mis en cache par le serveur.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h3>Polices optimisées</h3>
+                        <p>Seulement deux polices (Crimson Pro et Inter), avec uniquement les graisses utilisées, <code>preconnect</code> vers Google Fonts et <code>display=swap</code> pour afficher le texte sans attendre.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h3>Code léger</h3>
+                        <p>HTML sémantique, CSS organisé avec des variables (un seul fichier pour les deux thèmes), JavaScript minimal sans bibliothèque supplémentaire. HTML, CSS et JS sont séparés.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h3>Thème sombre</h3>
+                        <p>Le thème sombre réduit la consommation d'énergie sur les écrans OLED. Le choix du visiteur est mémorisé pour ses prochaines visites.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom">
+                        <h3>Cookies & RGPD</h3>
+                        <p>Les cookies sont gérés par Cookiebot : Google Analytics n'est chargé qu'après le consentement du visiteur, ce qui évite des requêtes inutiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 class="section-title">Empreinte carbone</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-custom text-center">
+                        <p>Le badge ci-dessous indique l'empreinte carbone estimée d'une visite sur ce site, calculée par Website Carbon.</p>
+                        <div id="wcb" class="carbonbadge"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ressources -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">En savoir plus</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-custom">
+                        <ul>
+                            <li><a href="https://www.websitecarbon.com/" target="_blank">Website Carbon Calculator</a> - mesure l'empreinte carbone d'un site</li>
+                            <li><a href="https://ecoresponsable.numerique.gouv.fr/" target="_blank">Numérique responsable (gouv.fr)</a> - référentiel français d'écoconception</li>
+                            <li><a href="https://collectif.greenit.fr/" target="_blank">GreenIT.fr</a> - collectif sur le numérique responsable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Neo SEGARD - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+</body>
+</html>

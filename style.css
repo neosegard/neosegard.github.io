@@ -1,0 +1,491 @@
+:root {
+    --bg-primary: #fafaf9;
+    --bg-secondary: #fef7ed;
+    --text-primary: #292524;
+    --text-secondary: #57534e;
+    --accent: #ea580c;
+    --accent-hover: #c2410c;
+    --border: #e7e5e4;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1a202c;
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e1;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --border: #334155;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Pro', serif;
+}
+
+/* Header */
+.navbar-custom {
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--border);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--accent) !important;
+}
+
+.nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
+}
+
+/* Center theme button on mobile */
+@media (max-width: 991px) {
+    .theme-toggle {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--bg-primary);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.btn-primary-custom {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Section Projects */
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.card-custom {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: var(--accent);
+}
+
+.card-custom h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.card-custom p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Contact */
+.card-custom a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-custom a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Listes de liens (page éco) */
+.card-custom ul {
+    list-style-position: inside;
+    padding-left: 0;
+    color: var(--text-secondary);
+}
+
+.card-custom ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Badge carbone (blanc ou noir géré par script.js) */
+#wcb {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-secondary);
+    border-top: 2px solid var(--border);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Hamburger menu animation */
+.navbar-toggler {
+    border: 2px solid var(--text-primary);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(41, 37, 36, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(226, 232, 240, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* ===================== Veille technologique ===================== */
+.veille-intro {
+    max-width: 42rem;
+    margin: -1.5rem auto 2.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.veille-chargement {
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.veille-entete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.veille-etiquette {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-right: auto;
+}
+
+.veille-domaine,
+.veille-mot {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+.veille-note {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+    color: #ffffff;
+    font-variant-numeric: tabular-nums;
+}
+.veille-note-haute   { background-color: #15803d; }
+.veille-note-moyenne { background-color: #b45309; }
+.veille-note-basse   { background-color: #b91c1c; }
+
+.card-custom h3.veille-titre {
+    color: var(--text-primary);
+}
+
+.veille-carte .btn-primary-custom {
+    margin-top: 0.5rem;
+}
+
+/* Historique */
+.veille-historique-entete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin: 1rem 0 0.75rem;
+}
+
+.veille-historique-titre {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.veille-filtre {
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+.veille-historique {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.veille-historique li + li {
+    border-top: 1px solid var(--border);
+}
+
+.veille-ligne {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 9rem 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.9rem 1.25rem;
+    border: none;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.veille-ligne:hover,
+.veille-ligne:focus-visible {
+    background-color: var(--bg-primary);
+    color: var(--accent);
+}
+
+.veille-ligne:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+.veille-ligne-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.veille-ligne-titre {
+    font-weight: 500;
+    min-width: 0;
+}
+
+.veille-ligne-domaine {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.veille-vide {
+    padding: 1rem 1.25rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+}
+
+.veille-plus {
+    display: block;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.veille-plus:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+@media (max-width: 576px) {
+    .veille-ligne {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+}
+
+/* Fenêtre du résumé complet */
+.veille-modal {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+}
+
+.veille-modal .modal-header,
+.veille-modal .modal-footer {
+    border-color: var(--border);
+}
+
+.veille-modal .modal-title {
+    font-size: 1.8rem;
+}
+
+.veille-meta {
+    margin: 0 0 0.25rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.veille-corps p {
+    line-height: 1.7;
+    color: var(--text-primary);
+}
+
+.veille-mots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.veille-note-bloc {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.veille-justif {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .veille-modal .btn-close {
+    filter: invert(1);
+}
+
+/* Démarche et sources de veille */
+.veille-demarche {
+    margin: -1.5rem auto 2rem;
+}
+
+.veille-demarche .veille-intro {
+    margin: 0 auto 0.75rem;
+}
+
+.veille-sources-titre {
+    font-size: 1.6rem;
+    margin: 0 0 1rem;
+}
+
+.veille-sources {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.veille-source-carte {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+}
+
+.veille-source-carte h4 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+}
+
+.veille-source-carte h4 a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.veille-source-carte h4 a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.veille-source-carte p {
+    margin: 0 0 0.35rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+.veille-source-carte p:last-child {
+    margin-bottom: 0;
+}
+
+.veille-plus[hidden] {
+    display: none;
+}
